@@ -1,14 +1,17 @@
-console.log("Hello, World!");
 function getComputerChoice () {
-    let cChoice = Math.floor((Math.random() * 3));
-    console.log(cChoice);
-    if (cChoice === 0) {
-        cChoice =  "rock"
-    } else if (cChoice === 1) {
-        cChoice = "paper"
+    let choice = Math.floor((Math.random() * 3));
+    if (choice === 0) {
+        return  "rock"
+    } else if (choice === 1) {
+        return "paper"
     } else {
-        cChoice = "scissors"
+        return "scissors"
     };
-    console.log(cChoice)
+    
+};
+console.log(getComputerChoice());
+function getHumanChoice () {
+    let choice = window.prompt("Please enter either rock, paper or scissors");
+    return choice;
 }
-getComputerChoice()
+console.log(getHumanChoice())
